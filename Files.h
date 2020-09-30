@@ -1,5 +1,5 @@
 //
-//  files.h
+//  Files.h
 //
 //
 //  Created by Team 3.
@@ -37,16 +37,16 @@ EXTERN FILE * euler_file(char *name, char *mode);
 
 
 /**
- * Writes a bidimensional buffer array into a file.
+ * Writes a dynamic list into a file.
  * @param
  *  file (FILE *):
  *      Storage file
- *  columns (size_t ):
- *      length of the buffer array
- *  buff [ ][columns] (long double):
- *      RAM matrix
- *  rows (size_t):
- *      width of the storage buffer
+ *  first (conditions):
+ *      The first node of the dynamic list
+ *  aux (conditions):
+ *      The auxiliary of the dynamic list
+ *  node (conditions):
+ *      The actual node of the dynamic list
  *
  * @return void.
 */
@@ -58,4 +58,4 @@ EXTERN void euler_save(FILE * file, conditions *first, conditions *aux, conditio
 
 
 
-#endif /* files_h */
+#endif /* Files_h */

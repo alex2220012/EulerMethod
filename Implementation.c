@@ -6,10 +6,10 @@
 //
 /**
 * Our sample program.
-* @copyright 2008 by TDA
+* @copyright 2020 by TDA
 * @license as you wish
 * @author Team 3.
-* @version 2020-08-09
+* @version 2020-09-30
 * @file
 */
 
@@ -28,7 +28,6 @@
 
 int main(int argc, char **argv)
 {
-<<<<<<< HEAD
     /* Initialize modules: */
     float k,m,position1,position2,position3,dt,time,t;
     const double g = 9.81;
@@ -46,7 +45,7 @@ int main(int argc, char **argv)
 
 
 
-    for (float i = 0; i < t;) {
+    for (float i = 0; i <= t;) {
 
 
       start=clock ();
@@ -69,30 +68,4 @@ int main(int argc, char **argv)
 
 
     return 0;
-=======
-  int opcion;
-  double time, position;
-  clock_t start,stop;
-  EulerStruct *aux;
-  EulerStruct *first = NULL;
-  double position1=0,position2=0,position3=0;
-  double k= 500, m = 60, g = 9.81;
-  double dt, t;
-  FILE *fp;
-
-
-  euler_menu();
-  for (size_t i = 0; i < t; i++) {
-    start=clock();
-    euler_formula (&position1,&position2,&position3,k,m,g,dt);
-    stop=clock();
-    time = ((double)(stop-start))/CLOCKS_PER_SEC;
-    euler_create_list (&first,&aux,position3,time);
-  }
-  fp=fopen("hola.csv","wt");
-  euler_store_list (first,fp);
-  fclose (fp);
-
-  return 0;
->>>>>>> a7ee03df20501d3d6a9f1696e16d172d005b258f
 }
